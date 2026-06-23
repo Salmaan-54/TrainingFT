@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import joblib
 import pandas as pd
 from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score
 from sklearn.model_selection import train_test_split
@@ -39,6 +40,30 @@ def fraud_detection_train(file_path):
 
     cm = confusion_matrix(y_test, y_pred)
     print(f"Confusion Matrix:\n{cm}")
+
+    # Create the outputs directory if it doesn't exist and dump the model artifact
+    os.makedirs("outputs", exist_ok=True)
+
+    model_path = os.getenv('model_path')
+
+    artifact = {
+            "model": clf,
+            "feature_columns": x.columns.tolist(),
+            "metrics": {
+                "accuracy": accuracy,
+                "f1_score": f1,
+                "precision": precision,
+                "recall": recall
+            }
+        }
+
+
+
+    joblib.dump(artifact, model_path)
+
+    print(f"\nModel saved to: {model_path}")
+
+    return model_path
 
 
 if __name__ == "__main__":
