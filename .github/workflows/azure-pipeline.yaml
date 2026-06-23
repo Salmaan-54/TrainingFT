@@ -36,6 +36,6 @@ jobs:
             echo "Model artifact not found!" && exit 1
           fi
 
-      - name: Testing: Run scoring script
+      - name: Testing, Run scoring script
         run: |
           python src/azuremlapp/utils/score.py
