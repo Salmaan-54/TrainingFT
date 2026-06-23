@@ -1,0 +1,12 @@
+azure-ai-ml<2,>=1.24
+azure-identity<2,>=1.19
+joblib<2,>=1.4
+python-dotenv<2,>=1.0
+scikit-learn<2,>=1.0
+pandas
+uvicorn
+
+[dev]
+pytest>=8.0.0
+black>=24.0.0
+isort>=5.0.0

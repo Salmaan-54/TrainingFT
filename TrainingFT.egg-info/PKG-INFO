@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: TrainingFT
+Version: 0.0.1
+Summary: Covering the MLOps topic
+Author-email: Salmaan <Salmaan@abc.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: azure-ai-ml<2,>=1.24
+Requires-Dist: azure-identity<2,>=1.19
+Requires-Dist: joblib<2,>=1.4
+Requires-Dist: python-dotenv<2,>=1.0
+Requires-Dist: scikit-learn<2,>=1.0
+Requires-Dist: pandas
+Requires-Dist: uvicorn
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+
+# TrainingFT

@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+TrainingFT.egg-info/PKG-INFO
+TrainingFT.egg-info/SOURCES.txt
+TrainingFT.egg-info/dependency_links.txt
+TrainingFT.egg-info/requires.txt
+TrainingFT.egg-info/top_level.txt

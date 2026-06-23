@@ -1,0 +1,39 @@
+[project]
+name = "TrainingFT"
+version = "0.0.1"
+description = "Covering the MLOps topic"
+authors = [
+    { name = "Salmaan", email = "Salmaan@abc.com" }
+]
+
+readme = "README.md"
+requires-python = ">=3.10"
+ 
+dependencies = [
+    "azure-ai-ml>=1.24,<2",
+    "azure-identity>=1.19,<2",
+    "joblib>=1.4,<2",
+    "python-dotenv>=1.0,<2",
+    "scikit-learn>=1.0,<2",
+    "pandas",
+    "uvicorn"       
+
+]
+ 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "isort>=5.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
